@@ -1,9 +1,16 @@
+
+
 var express = require('express');
 
-var app = express();
-var server = app.listen(5000);
 
-app.use(express.static('public'));
+var app = express();
+var server = app.listen(3000);
+const path = require('path');
+
+console.log(path.join(__dirname,""))
+
+app.use(express.static(path.join(__dirname,"public")));
+
 
 console.log("server running");
 
