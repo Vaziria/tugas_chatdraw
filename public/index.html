@@ -4,12 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
     <style> body {padding: 0; margin: 0;} </style>
-    <script src="./p5/p5.min.js"></script>
+<!--     <script src="./p5/p5.min.js"></script>
     <script src="./p5/addons/p5.dom.min.js"></script>
-    <script src="./p5/addons/p5.sound.min.js"></script>
+    <script src="./p5/addons/p5.sound.min.js"></script> -->
     <script src="./socket.io.js"></script>
-    <script src="sketch.js"></script>
+    <script>
+      socket = io.connect('http://localhost:3000');
+    </script>
+    <!-- <script src="sketch.js"></script> -->
   </head>
   <body>
+    <h2>chat</h2>
+    <div id="bodychat">
+    </div>
+
+    <textarea id='chatmsg'></textarea><button id="send">send</button>
   </body>
+  <script src="./chat.js"></script>
 </html>
